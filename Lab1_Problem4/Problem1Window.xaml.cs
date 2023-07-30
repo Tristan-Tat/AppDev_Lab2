@@ -41,12 +41,13 @@ namespace Lab1_Problem1
             BankCharges account = new BankCharges();
 
             decimal currentBalance = decimal.Parse(TextBoxAccount.Text);
+            int numOfChecks = int.Parse(TextBoxChecks.Text);
 
             account.SetAccountBalance(currentBalance);
-            account.SetNumberOfChecks(int.Parse(TextBoxChecks.Text));
+            account.SetNumberOfChecks(numOfChecks);
 
-            decimal newBalance = currentBalance - account.CalcCharges();
-            TextBoxAccount.Text = newBalance.ToString();
+            account.executeCharges();
+            TextBoxAccount.Text = account.GetAccountBalance().ToString();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

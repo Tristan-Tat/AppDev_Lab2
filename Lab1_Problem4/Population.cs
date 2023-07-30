@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab1_Problem3
 {
-    internal class Population
+    public class Population
     {
         int startingPop, days;
         double avgDailyPopGrowth;

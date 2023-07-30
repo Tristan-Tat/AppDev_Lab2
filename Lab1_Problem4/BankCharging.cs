@@ -7,7 +7,7 @@ using System.Windows.Media.TextFormatting;
 
 namespace Lab1_Problem1
 {
-    internal class BankCharges
+    public class BankCharges
     {
         private int numOfChecks;
         private decimal accountBalance;
@@ -53,16 +53,17 @@ namespace Lab1_Problem1
 
         public decimal CalcCheckFees()
         {
-            decimal fee;
-            if (this.numOfChecks < 20) { fee = this.numOfChecks * 0.10M; }
-            else
-            if (this.numOfChecks < 40) { fee = this.numOfChecks * 0.08M; }
-            else
-            if (this.numOfChecks < 60) { fee = this.numOfChecks * 0.06M; }
-            else { fee = this.numOfChecks * 0.10M; }
-            return fee;
+
+            if (this.numOfChecks < 20) { return this.numOfChecks * 0.10M; }
+            if (this.numOfChecks < 40) { return this.numOfChecks * 0.08M; }
+            if (this.numOfChecks < 60) { return this.numOfChecks * 0.06M; }
+            return this.numOfChecks * 0.10M; ;
         }
 
+        public void executeCharges()
+        { 
+            this.SetAccountBalance(this.GetAccountBalance() - this.CalcCharges());
+        }
 
     }
 }

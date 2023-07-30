@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab1_Problem2
 {
-    internal class Package
+    public class Package
     {
         double weight_kg;
         double distance_miles;
@@ -19,10 +19,10 @@ namespace Lab1_Problem2
 
         public decimal CalcPrice()
         {
-            return this.GetRate() * (int) (this.distance_miles / 500);
+            return this.GetRate() * (decimal) Math.Ceiling(this.distance_miles / 500);
         }
 
-        private decimal GetRate()
+        public decimal GetRate()
         {
             if (this.weight_kg <= 2) return 1.10M;
             if (this.weight_kg <= 6) return 2.20M;

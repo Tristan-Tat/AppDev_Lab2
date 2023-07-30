@@ -40,7 +40,7 @@ namespace Lab1_Problem2
             double weight = double.Parse(TextBoxWeight.Text);
             double distance = double.Parse(TextBoxDistance.Text);
             decimal price = new Package(weight, distance).CalcPrice();
-            PriceLabel.Content = $"{price}$";
+            PriceLabel.Content = price + "$";
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
