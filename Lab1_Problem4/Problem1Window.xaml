@@ -1,0 +1,30 @@
+﻿<Window x:Class="Lab1_Problem1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab1_Problem1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="200" Closing="Window_Closing">
+    <Grid>
+        <Grid ShowGridLines="False">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32*"/>
+                <RowDefinition Height="29*"/>
+                <RowDefinition Height="35*"/>
+                <RowDefinition Height="26*"/>
+                <RowDefinition Height="61*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBox Name="TextBoxChecks" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" VerticalAlignment="Center" Width="120" Grid.Row="1" TextChanged="TextBox_TextChanged"/>
+            <TextBox Name="TextBoxAccount" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" Text="0" VerticalAlignment="Center" Width="120" TextChanged="TextBoxAccount_TextChanged"/>
+            <Button Name="FeeButton"  Content="Apply Monthly Fees" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Width="120" Click="Button_Click"/>
+            <Label Content="Account Balance:" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Top" Grid.RowSpan="2" Width="120" Margin="0,13,0,0"/>
+            <Label Content="# of checks written:" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Grid.RowSpan="2" Width="120"/>
+
+        </Grid>
+
+    </Grid>
+</Window>

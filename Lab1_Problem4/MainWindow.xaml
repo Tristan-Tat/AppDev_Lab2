@@ -1,0 +1,26 @@
+﻿<Window x:Class="Lab1_Problem4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab1_Problem4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="120">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <RadioButton Name="Problem_1" GroupName="Menu" Content="Problem 1" HorizontalAlignment="Left" Margin="21,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="0.629,0.643" Checked="RadioButton_Checked" IsChecked="True"/>
+        <RadioButton Name="Problem_2" GroupName="Menu" Content="Problem 2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="21,0,0,0" Checked="RadioButton_Checked_1" Grid.Row="1"/>
+        <RadioButton Name="Problem_3" GroupName="Menu" Content="Problem 3" HorizontalAlignment="Left" Margin="21,0,0,0" Grid.Row="2" VerticalAlignment="Center" Checked="RadioButton_Checked_2"/>
+        <Button Content="Open" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center" Margin="38,0,0,0" Click="Button_Click"/>
+
+    </Grid>
+</Window>
